@@ -12,8 +12,8 @@ The `setup.sh` script utilizes a hybrid approach to creating symlinks:
 ## Usage
 1. Clone the repository
 ```sh
-   git clone https://github.com/yezdata/dotfiles.git ~/dotfiles
-   cd ~/dotfiles
+git clone https://github.com/yezdata/dotfiles.git ~/dotfiles
+cd ~/dotfiles
 ```
 
 2. Grant execution permissions to the script
