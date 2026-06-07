@@ -4,9 +4,9 @@ My personal configurations for macOS and Linux. Managed via a custom, lightweigh
 
 ## Architecture & How It Works
 
-The `setup.sh` script utilizes a hybrid approach to creating symbolic links (symlinks):
+The `setup.sh` script utilizes a hybrid approach to creating symlinks:
 
-1. **Granular Symlinking (`fish`, `ghostty`, `git`, `tmux`)**: The script iterates through the repository file by file. It creates symlinks *only* for the files that actually exist in this repository. Other local files (e.g., auto-generated fish completions, history, or local caches) inside your system's `~/.config` remain completely untouched.
+1. **Granular Symlinking (`fish`, `ghostty`, `git`, `tmux`)**: The script iterates through the repository file by file. It creates symlinks *only* for the files that actually exist in this repository. Other local files (e.g., auto-generated fish completions, history, or local caches) inside system's `~/.config` remain completely untouched.
 2. **Bulk Symlinking (`nvim`)**: The entire Neovim directory is symlinked as a single unit, making it easier to manage the complex, nested Lua structure.
 
 ## Usage
