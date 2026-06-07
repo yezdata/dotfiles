@@ -1,0 +1,40 @@
+font-family = "JetBrainsMono Nerd Font Mono"
+font-style = "SemiBold"
+font-style-bold = "ExtraBold"
+font-style-italic = "Italic"
+font-style-bold-italic = "ExtraBold Italic"
+
+font-size = 20
+font-thicken = true
+
+#theme = light:Aardvark Blue, dark:Andromeda
+#theme = light:Aardvark Blue, dark:Batman
+
+theme = light:Aardvark Blue, dark:TokyoNight
+# cursor-color = #98F5F9
+foreground = #858585
+
+background-opacity = 0.9
+#background-opacity-cells = true
+background-blur = 20
+
+macos-titlebar-style = transparent
+macos-titlebar-proxy-icon = hidden
+
+command = /opt/homebrew/bin/fish
+
+#keybind = cmd+f=write_selection_file:open # ulozi scrollback historii do souboru a pak otevre v TextEdit
+#keybind = cmd+f=text:pbpaste | nvim -c 'set buftype=nofile' - \x0d # zkopiruje selection a vlozi do nvimu s flagy neukladat
+keybind = cmd+f=text:pbpaste | less -R +G\x0d
+
+keybind = cmd+ctrl+space=toggle_command_palette
+keybind = cmd+ctrl+h=goto_split:left
+keybind = cmd+ctrl+j=goto_split:down
+keybind = cmd+ctrl+k=goto_split:up
+keybind = cmd+ctrl+l=goto_split:right
+
+keybind = cmd+plus=goto_tab:1
+macos-option-as-alt = left
+
+window-height=30
+window-width=110

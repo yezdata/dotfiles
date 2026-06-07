@@ -1,0 +1,17 @@
+.idea/
+.vscode/
+
+__pycache__/
+*.py[cod]
+*$py.class
+build/
+dist/
+wheels/
+*.egg-info
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+.ruff_cache/
+.venv/
+
+.DS_Store
