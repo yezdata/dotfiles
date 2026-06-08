@@ -13,6 +13,10 @@ if status is-interactive
         end
     end
 
+  function fish_user_key_bindings
+    bind \cg 'project_tmux; commandline -f repaint'
+  end
+
   zoxide init --cmd cd fish | source
   starship init fish | source
 
