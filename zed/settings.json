@@ -1,0 +1,148 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "extend_comment_on_newline": false,
+  "completions": {
+    
+  },
+  "proxy": "",
+  "agent": {
+    "button": true,
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "outline_panel": {
+    "button": true
+  },
+  "zoomed_padding": true,
+  "bottom_dock_layout": "contained",
+  "preview_tabs": {
+    "enabled": true
+  },
+  "tabs": {
+    "show_close_button": "hover",
+    "show_diagnostics": "all",
+    "file_icons": true,
+    "git_status": false
+  },
+  "tab_bar": {
+    "show_tab_bar_buttons": true,
+    "show_nav_history_buttons": false,
+    "show": true
+  },
+  "title_bar": {
+    "show_menus": false,
+    "show_user_picture": true,
+    "show_user_menu": true,
+    "show_project_items": true,
+    "show_branch_name": true,
+    "show_branch_status_icon": true
+  },
+  "debugger": {
+    "button": true
+  },
+  "search": {
+    "button": false
+  },
+  "status_bar": {
+    "show_active_file": false,
+    "cursor_position_button": true,
+    "active_language_button": true
+  },
+  "project_panel": {
+    "sort_mode": "directories_first",
+    "sort_order": "default",
+    "git_status_indicator": true,
+    "diagnostic_badges": false,
+    "bold_folder_labels": true,
+    "button": true
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    },
+    "enable_diff": true
+  },
+  "preferred_line_length": 80,
+  "soft_wrap": "editor_width",
+  "diagnostics": {
+    "button": true,
+    "inline": {
+      "enabled": true
+    }
+  },
+  "message_editor": {
+    
+  },
+  "colorize_brackets": true,
+  "inlay_hints": {
+    "show_type_hints": false,
+    "show_background": false,
+    "show_value_hints": true,
+    "enabled": true
+  },
+  "indent_guides": {
+    "background_coloring": "disabled",
+    "coloring": "indent_aware"
+  },
+  "toolbar": {
+    "code_actions": false,
+    "agent_review": true,
+    "selections_menu": true,
+    "quick_actions": true,
+    "breadcrumbs": true
+  },
+  "minimap": {
+    "thumb": "always",
+    "show": "never"
+  },
+  "inline_code_actions": true,
+  "cursor_shape": "bar",
+  "vim": {
+    "use_system_clipboard": "never",
+    "toggle_relative_line_numbers": true
+  },
+  "relative_line_numbers": "disabled",
+  "terminal": {
+    "show_count_badge": false,
+    "button": true,
+    "font_family": "JetBrainsMonoNL Nerd Font Mono",
+    "shell": {
+      "program": "fish"
+    }
+  },
+  "buffer_font_weight": 500.0,
+  "buffer_font_family": ".ZedMono",
+  "edit_predictions": {
+    "provider": "copilot"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "vim_mode": true,
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry"
+    }
+  },
+  "base_keymap": "VSCode",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Tokyo Night",
+  },
+}

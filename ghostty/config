@@ -4,7 +4,7 @@ font-style-bold = "ExtraBold"
 font-style-italic = "Italic"
 font-style-bold-italic = "ExtraBold Italic"
 
-font-size = 20
+font-size = 22
 font-thicken = true
 
 #theme = light:Aardvark Blue, dark:Andromeda
@@ -21,7 +21,7 @@ background-blur = 20
 macos-titlebar-style = transparent
 macos-titlebar-proxy-icon = hidden
 
-command = fish
+command = /opt/homebrew/bin/fish
 
 #keybind = cmd+f=write_selection_file:open # ulozi scrollback historii do souboru a pak otevre v TextEdit
 #keybind = cmd+f=text:pbpaste | nvim -c 'set buftype=nofile' - \x0d # zkopiruje selection a vlozi do nvimu s flagy neukladat
