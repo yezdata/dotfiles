@@ -9,7 +9,7 @@ mkdir -p "$TARGET_CONFIG_DIR"
 
 
 # 1: File link
-for app in fish ghostty git tmux; do
+for app in fish ghostty git tmux zed; do
     if [ -d "$DOTFILES_DIR/$app" ]; then
         echo "Synchronizing $app"
         
