@@ -21,7 +21,7 @@ background-blur = 20
 macos-titlebar-style = transparent
 macos-titlebar-proxy-icon = hidden
 
-command = /opt/homebrew/bin/fish
+command = fish
 
 #keybind = cmd+f=write_selection_file:open # ulozi scrollback historii do souboru a pak otevre v TextEdit
 #keybind = cmd+f=text:pbpaste | nvim -c 'set buftype=nofile' - \x0d # zkopiruje selection a vlozi do nvimu s flagy neukladat
