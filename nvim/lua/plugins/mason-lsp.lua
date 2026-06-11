@@ -52,8 +52,11 @@ return {
                     map("n", "gd", vim.lsp.buf.definition, "Go to Definition")
                     map("n", "K", vim.lsp.buf.hover, "Show Documentation")
                     map("n", "gl", vim.diagnostic.open_float, "Show Error Details")
+                    map("n", "[d", vim.diagnostic.goto_prev, "Previous Diagnostic")
+                    map("n", "]d", vim.diagnostic.goto_next, "Next Diagnostic")
                     map("n", "<leader>rn", vim.lsp.buf.rename, "Rename Variable")
                     map("n", "<leader>ca", vim.lsp.buf.code_action, "Code Action")
+                    map("n", "<leader>rr", vim.lsp.buf.references, "Show References")
                     map("n", "<leader>fr", function()
                         vim.lsp.buf.format({
                             async = true,
