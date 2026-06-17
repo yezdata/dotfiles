@@ -43,3 +43,39 @@ local minifiles_toggle = function(...)
     end
 end
 vim.keymap.set("n", "<leader>e", minifiles_toggle, { silent = true, desc = "Toggle mini.files explorer" })
+
+
+local rm_comments = function()
+    local current_file = vim.api.nvim_buf_get_name(0)
+
+    if current_file == "" then
+        vim.notify("Error: Current buffer is not a file on disk", vim.log.levels.ERROR)
+        return
+    end
+
+    if vim.bo.modified then
+        vim.cmd("silent write")
+    end
+
+    local home = os.getenv("HOME")
+    local cmd = home .. "/.local/bin/el_stripper"
+    local full_cmd = string.format("%s %s --doc", vim.fn.shellescape(cmd), vim.fn.shellescape(current_file))
+
+    local output = vim.fn.system(full_cmd)
+    local exit_code = vim.v.shell_error
+
+    if exit_code == 0 then
+        vim.cmd("checktime")
+        local clean_output = vim.trim(output)
+        local filename = vim.fn.fnamemodify(current_file, ":t")
+        if clean_output ~= "" then
+            vim.notify(clean_output, vim.log.levels.INFO)
+        else
+            vim.notify("[✓] Stripped comments and docstrings in " .. filename, vim.log.levels.INFO)
+        end
+    else
+        vim.notify("Exit: code " .. exit_code .. "):\n" .. vim.trim(output), vim.log.levels.ERROR)
+    end
+end
+
+vim.keymap.set('n', '<leader>rc', rm_comments)
