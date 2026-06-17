@@ -65,7 +65,8 @@ local rm_comments = function()
     local exit_code = vim.v.shell_error
 
     if exit_code == 0 then
-        vim.cmd("checktime")
+        vim.cmd("silent edit!")
+
         local clean_output = vim.trim(output)
         local filename = vim.fn.fnamemodify(current_file, ":t")
         if clean_output ~= "" then
