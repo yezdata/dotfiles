@@ -4,7 +4,7 @@ return {
     priority = 1000,
     config = function()
         require("tokyonight").setup({
-            transparent = false,
+            transparent = true,
             styles = {
                 comments = { italic = true },
                 keywords = { bold = true },
