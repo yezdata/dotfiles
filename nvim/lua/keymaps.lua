@@ -46,7 +46,7 @@ vim.keymap.set("n", "<leader>e", minifiles_toggle, { silent = true, desc = "Togg
 
 
 -- comment stripping
-vim.keymap.set('n', '<leader>els', ":ElStripper<CR>",
+vim.keymap.set('n', '<leader>rc', ":ElStripper<CR>",
     { silent = true, desc = "Strip comments & docstrings in current file" })
 
-vim.keymap.set("v", "<leader>els", ":StripComments<CR>", { silent = true, desc = "Strip comments" })
+vim.keymap.set("v", "<leader>rc", ":StripComments<CR>", { silent = true, desc = "Strip comments" })
