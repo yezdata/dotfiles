@@ -20,6 +20,8 @@ vim.opt.autoindent = true
 vim.opt.smartindent = false -- Handled by LSP/Treesitter
 vim.opt.smarttab = true
 
+vim.g.pyindent_open_paren = "shiftwidth()"
+
 vim.opt.smoothscroll = true
 vim.opt.signcolumn = "yes"
 vim.opt.scrolloff = 10
