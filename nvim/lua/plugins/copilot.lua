@@ -19,12 +19,12 @@ return {
                     debounce = 75,
                     keymap = {
                         -- suggest = "<M-n>",
-                        accept = "<M-l>",
+                        accept = "<Up>",
                         accept_word = false,
                         accept_line = false,
-                        next = "<M-n>",
-                        prev = "<M-p>",
-                        dismiss = "<M-e>",
+                        next = "<Down>",
+                        -- prev = "<Up>",
+                        dismiss = "<M-C-e>",
                     },
                 },
             })
