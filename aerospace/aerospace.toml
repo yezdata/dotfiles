@@ -8,7 +8,9 @@ config-version = 2
 
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+after-startup-command = [
+  'exec-and-forget borders active_color="gradient(top_left=0xffe1e3e4,bottom_right=0xff494d64)" inactive_color=0xff494d64 width=5.0'
+]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -44,7 +46,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
-automatically-unhide-macos-hidden-apps = false
+automatically-unhide-macos-hidden-apps = true
 
 # List of workspaces that should stay alive even when they contain no windows,
 # even when they are invisible.
@@ -62,7 +64,7 @@ persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "B", "T", 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 on-mode-changed = []
 
-focus-follows-mouse.enabled = false
+focus-follows-mouse.enabled = true
 
 # Possible values: (qwerty|dvorak|colemak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
@@ -76,12 +78,12 @@ key-mapping.preset = 'qwerty'
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
-gaps.inner.horizontal = 8
-gaps.inner.vertical =   8
-gaps.outer.left =       8
-gaps.outer.bottom =     8
-gaps.outer.top =        8
-gaps.outer.right =      8
+gaps.inner.horizontal = 4
+gaps.inner.vertical =   4
+gaps.outer.left =       4
+gaps.outer.bottom =     4
+gaps.outer.top =        4
+gaps.outer.right =      4
 
 
 [workspace-to-monitor-force-assignment]
