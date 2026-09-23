@@ -14,15 +14,17 @@ IGNORE_FILE="/Users/jezva/.rcloneignore"
 mkdir -p "$STATE_DIR" "$(dirname "$LOG_FILE")"
 touch "$LOG_FILE"
 
-# 1. Atomický zámek přes mkdir
 if ! mkdir "$LOCK_DIR" 2>/dev/null; then
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] Script already running or stale lock exists ($LOCK_DIR)." >> "$LOG_FILE"
     exit 0
 fi
-# Trap automaticky uklidí lockdir při jakémkoliv exit kódu
 trap 'rm -rf "$LOCK_DIR"' EXIT INT TERM
 
-# 2. Kontrola napájení
+FORCE=false
+if [[ "${1:-}" == "--force" ]]; then
+    FORCE=true
+fi
+
 ON_BATTERY=false
 if pmset -g batt | grep -q "Battery Power"; then
     ON_BATTERY=true
@@ -35,8 +37,7 @@ if [[ -f "$LAST_RUN_FILE" ]]; then
 fi
 ELAPSED=$(( NOW - LAST_RUN ))
 
-# 3. Řízení intervalů (6 hodin = 21600 s na baterii)
-if [ "$ON_BATTERY" = true ]; then
+if [ "$ON_BATTERY" = true ] && [ "$FORCE" = false ]; then
     if (( ELAPSED < 21600 )); then
         echo "[$(date '+%Y-%m-%d %H:%M:%S')] On battery: only ${ELAPSED}s elapsed since last sync (required 21600s). Skipping." >> "$LOG_FILE"
         exit 0
@@ -48,11 +49,11 @@ else
     TRANSFERS=4
 fi
 
+
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting gdrive sync (Battery: $ON_BATTERY)..." >> "$LOG_FILE"
 
 ALL_SUCCESS=true
 
-# Sestavení volitelných argumentů pro exclude
 EXCLUDE_ARGS=()
 if [ -f "$IGNORE_FILE" ]; then
     EXCLUDE_ARGS+=("--exclude-from" "$IGNORE_FILE")
