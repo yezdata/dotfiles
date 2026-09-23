@@ -1,5 +1,5 @@
 function project_tmux --description "Open project from ~/projects in tmuxu with nvim and shell"
-    set -l target_dir (fd --type d --min-depth 1 --max-depth 3 \
+    set -l target_dir (fd --type d --min-depth 1 --max-depth 4 \
         --exclude .git --exclude .venv --exclude node_modules \
         . ~/projects | fzf --prompt="project: " --height=40% --reverse)
 

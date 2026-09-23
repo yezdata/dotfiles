@@ -56,7 +56,7 @@ automatically-unhide-macos-hidden-apps = true
 #                          "C", "D", "E", "F", "G", "I", "M", "N", "O", "P", "Q",
 #                          "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
-persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "B", "T", "V", "N"]
+persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "B", "T", "V", "N", "E"]
 
 
 # A callback that runs every time binding mode changes
@@ -102,6 +102,7 @@ V = 'main'
 7 = 'secondary'
 8 = 'secondary'
 9 = 'secondary'
+E = 'secondary'
 
 
 # 'main' binding mode declaration
@@ -169,7 +170,7 @@ V = 'main'
     cmd-ctrl-alt-b = 'workspace B'
     # cmd-ctrl-alt-c = 'workspace C'
     # cmd-ctrl-alt-d = 'workspace D'
-    # cmd-ctrl-alt-e = 'workspace E'
+    cmd-ctrl-alt-e = 'workspace E'
     # cmd-ctrl-alt-f = 'workspace F'
     # cmd-ctrl-alt-g = 'workspace G'
     # cmd-ctrl-alt-i = 'workspace I'
@@ -202,7 +203,7 @@ V = 'main'
     cmd-ctrl-alt-shift-b = 'move-node-to-workspace B'
     # cmd-ctrl-alt-shift-c = 'move-node-to-workspace C'
     # cmd-ctrl-alt-shift-d = 'move-node-to-workspace D'
-    # cmd-ctrl-alt-shift-e = 'move-node-to-workspace E'
+    cmd-ctrl-alt-shift-e = 'move-node-to-workspace E'
     # cmd-ctrl-alt-shift-f = 'move-node-to-workspace F'
     # cmd-ctrl-alt-shift-g = 'move-node-to-workspace G'
     # cmd-ctrl-alt-shift-i = 'move-node-to-workspace I'
