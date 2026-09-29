@@ -14,6 +14,7 @@ function project_tmux --description "Open project from ~/projects in tmuxu with 
         set -l venv_cmd "test -f .venv/bin/activate.fish && source .venv/bin/activate.fish"
 
         tmux new-session -d -s $session_name -n "nvim" -c $target_dir "fish -i -c 'test -f .venv/bin/activate.fish && source .venv/bin/activate.fish; nvim; exec fish'"
+        tmux set-option -t $session_name @is_project 1
         
         tmux new-window -t $session_name:2 -n "shell" -c $target_dir "fish -i -c 'test -f .venv/bin/activate.fish && source .venv/bin/activate.fish; exec fish'"
         
