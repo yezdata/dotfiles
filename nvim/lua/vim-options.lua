@@ -61,4 +61,15 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
+-- Set 2-space indentation for C/C++ files (covers .c, .cpp, .h, .hpp, .cc, etc.)
+vim.api.nvim_create_autocmd("FileType", {
+    desc = "Set 2-space indentation for C and C++",
+    pattern = { "c", "cpp", "objc", "objcpp", "cuda" },
+    callback = function()
+        vim.opt_local.shiftwidth = 2
+        vim.opt_local.tabstop = 2
+        vim.opt_local.softtabstop = 2
+    end,
+})
+
 vim.g.ts_auto_install = false
