@@ -50,8 +50,28 @@ if [ -d "$DOTFILES_DIR/nvim" ]; then
 fi
 
 
+# 3. Antigravity AGENTS.md
+AGY_DIR="$HOME/.gemini"
+echo "Synchronizing AGENTS.md"
 
-# 3: Rclone & Backup Scripts
+mkdir -p "$AGY_DIR"
+
+src_agents="$DOTFILES_DIR/antigravity/AGENTS.md"
+dst_agents="$AGY_DIR/AGENTS.md"
+
+if [ -f "$src_agents" ]; then
+    if [ -e "$dst_agents" ] || [ -L "$dst_agents" ]; then
+        rm -f "$dst_agents"
+    fi
+
+    ln -s "$src_agents" "$dst_agents"
+    echo "  [OK] .gemini/AGENTS.md"
+fi
+
+
+
+
+# 4: Rclone & Backup Scripts
 RCLONE_DIR="$DOTFILES_DIR/rclone_sync"
 
 if [ -d "$RCLONE_DIR" ]; then

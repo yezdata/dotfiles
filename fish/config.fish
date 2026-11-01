@@ -27,6 +27,8 @@ if status is-interactive
 
   alias agyr 'agy-router ask -i'
 
+  abbr -a cl clear
+
   alias ls 'eza --color=always --all --grid --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --ignore-glob ".DS_Store|__pycache__|*.egg-info|*cache"'
   alias lst 'eza --color=always --all --tree --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first --ignore-glob ".DS_Store|__pycache__|.git|*.egg-info|.venv|*cache"'
 

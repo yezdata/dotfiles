@@ -17,10 +17,25 @@ return {
                 local config = vim.lsp.config[server_name] or {}
                 config.capabilities = vim.tbl_deep_extend("force", config.capabilities or {}, capabilities)
 
+                -- Pyright override
                 if server_name == "pyright" then
                     config.on_init = function(client)
                         client.server_capabilities.documentFormattingProvider = false
                     end
+                end
+
+                -- LTEX override: only text formats and lang setup
+                if server_name == "ltex" then
+                    config.filetypes = { "tex", "latex", "typst", "markdown", "txt" }
+                    config.settings = {
+                        ltex = {
+                            language = "en-US",
+                            diagnosticSeverity = "information",
+                            dictionary = {
+                                ["en-US"] = { "Fithesis", "MUNI", "Neovim" },
+                            },
+                        },
+                    }
                 end
 
                 vim.lsp.config(server_name, config)
