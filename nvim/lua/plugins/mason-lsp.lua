@@ -25,8 +25,8 @@ return {
                 end
 
                 -- LTEX override: only text formats and lang setup
-                if server_name == "ltex" then
-                    config.filetypes = { "tex", "latex", "typst", "markdown", "txt" }
+                if server_name == "ltex" or server_name == "ltex_plus" then
+                    config.filetypes = { "tex", "latex", "markdown", "gitcommit", "txt" }
                     config.settings = {
                         ltex = {
                             language = "en-US",
