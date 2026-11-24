@@ -3,15 +3,15 @@ set -gx EDITOR nvim
 
 if status is-interactive
 
-  # function fish_greeting
-  #   echo ""
-  # end
-
   function fish_greeting
-    if git rev-parse --is-inside-work-tree >/dev/null 2>&1
-        onefetch
-        end
-    end
+    echo ""
+  end
+
+  # function fish_greeting
+  #   if git rev-parse --is-inside-work-tree >/dev/null 2>&1
+  #       onefetch
+  #       end
+  #   end
 
   function fish_user_key_bindings
     bind \cg 'project_tmux; commandline -f repaint'

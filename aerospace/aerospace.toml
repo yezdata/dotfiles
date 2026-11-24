@@ -8,12 +8,10 @@ config-version = 2
 
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = [
-  'exec-and-forget borders active_color="gradient(top_left=0xffe1e3e4,bottom_right=0xff494d64)" inactive_color=0xff494d64 width=5.0'
-]
+after-startup-command = []
 
 # Start AeroSpace at login
-start-at-login = true
+start-at-login = false
 
 # Automatically reload the config when the config file is saved
 # After setting this to true, reload once manually to start the auto-reloading
@@ -87,22 +85,42 @@ gaps.outer.right =      4
 
 
 [workspace-to-monitor-force-assignment]
-# Čísla 1-5 a písmena B, T, V na hlavní monitor
-1 = 'main'
-2 = 'main'
-3 = 'main'
-4 = 'main'
-5 = 'main'
-B = 'main'
-T = 'main'
-V = 'main'
+# Main: CU34G2XP
+1 = 'CU34G2XP'
+2 = 'CU34G2XP'
+3 = 'CU34G2XP'
+B = 'CU34G2XP'
+T = 'CU34G2XP'
+V = 'PHL 248E9Q'
 
-# Čísla 6-9 na sekundární monitor
-6 = 'secondary'
-7 = 'secondary'
-8 = 'secondary'
-9 = 'secondary'
-E = 'secondary'
+# Second: PHL 248E9Q
+4 = 'PHL 248E9Q'
+5 = 'PHL 248E9Q'
+6 = 'PHL 248E9Q'
+N = 'PHL 248E9Q'
+
+# Tertiary: Built-in Retina Display
+7 = 'Built-in Retina Display'
+8 = 'Built-in Retina Display'
+9 = 'Built-in Retina Display'
+E = 'Built-in Retina Display'
+
+# 1 = 'main'
+# 2 = 'main'
+# 3 = 'main'
+# 4 = 'main'
+# 5 = 'main'
+# B = 'main'
+# T = 'main'
+# V = 'main'
+# N = 'main'
+#
+# # Čísla 6-9 na sekundární monitor
+# 6 = 'secondary'
+# 7 = 'secondary'
+# 8 = 'secondary'
+# 9 = 'secondary'
+# E = 'secondary'
 
 
 # 'main' binding mode declaration
